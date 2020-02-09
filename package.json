@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-modules-newline",
+  "version": "0.0.1",
+  "description": "Enforce placing import or export variables on a newline",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "import",
+    "export",
+    "newline"
+  ],
+  "author": "Anton Antonov (foxic[AT]foxic[DOT]ru)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "mocha": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test"
+    }
+  },
+  "license": "ISC"
+}
