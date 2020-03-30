@@ -55,6 +55,8 @@ Then configure the rules you want to use under the rules section.
 * Enforce placing import variables on separate lines (import-declaration-newline)
 * Enforce placing export variables on separate lines (export-declaration-newline)
 
+## For maintainers
+AST explorer - https://astexplorer.net/#/gist/b6093767261d6a5bce76043dcea24bec/5fe761308f41936beaa30cbe7aef3a6f0283e11d
 
 
 
