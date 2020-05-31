@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-modules-newline",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Enforce placing import or export variables on a newline",
   "keywords": [
     "eslint",
