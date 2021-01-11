@@ -13,8 +13,8 @@
   "author": "Anton Antonov (foxic[AT]foxic[DOT]ru)",
   "main": "lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/gmsorrow/eslint-plugin-modules-newline.git"
+    "type": "git",
+    "url": "https://github.com/gmsorrow/eslint-plugin-modules-newline.git"
   },
   "homepage": "https://github.com/gmsorrow/eslint-plugin-modules-newline#readme",
   "scripts": {
