@@ -20,8 +20,9 @@ ruleTester.run("import-declaration-newline", rule, {
     "import { k1 } from 'something';",
     "import {\nk1\n} from 'something';",
     "import {} from 'something';",
-    "import React, {\n useState } from 'react';",
+    "import React, { useState } from 'react';",
     "import React, {\nuseState } from 'react';",
+    "import React, {\nuseState, \nuseEffect } from 'react'",
   ],
   invalid: [
     {
@@ -38,6 +39,22 @@ ruleTester.run("import-declaration-newline", rule, {
     {
       code: "import { k1, k2, k3 } from 'something';",
       output: "import { k1,\nk2,\nk3 } from 'something';",
+      errors: [
+        {
+          type: "ImportDeclaration",
+          line: 1,
+          column: 1,
+        },
+        {
+          type: "ImportDeclaration",
+          line: 1,
+          column: 1,
+        },
+      ],
+    },
+    {
+      code: "import React, { useState, useEffect } from 'react';",
+      output: "import React, {\n useState,\nuseEffect } from 'react';",
       errors: [
         {
           type: "ImportDeclaration",
