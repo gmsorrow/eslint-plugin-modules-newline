@@ -12,7 +12,21 @@ jobs:
       - run:
           command: yarn run test
           name: Run YARN tests
+  build:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: yarn install --non-interactive
+      - run: npx semantic-release
 workflows:
   test_my_app:
     jobs:
       - test
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
